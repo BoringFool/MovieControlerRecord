@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.demo.dao.CourseDao" >
-  <resultMap id="BaseResultMap" type="com.demo.model.Course" >
+<mapper namespace="com.zm.dao.CourseDao" >
+  <resultMap id="BaseResultMap" type="com.zm.model.Course" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="cname" property="cname" jdbcType="VARCHAR" />
     <result column="teacher" property="teacher" jdbcType="VARCHAR" />
@@ -33,13 +33,13 @@
   </delete>
 
   <!-- 插入课程 -->
-  <insert id="insert" parameterType="com.demo.model.Course" >
+  <insert id="insert" parameterType="com.zm.model.Course" >
     insert into t_course (id, cname, teacher, 
       description)
     values (#{id,jdbcType=INTEGER}, #{cname,jdbcType=VARCHAR}, #{teacher,jdbcType=VARCHAR}, 
       #{description,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.demo.model.Course" >
+  <insert id="insertSelective" parameterType="com.zm.model.Course" >
     insert into t_course
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -70,7 +70,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.model.Course" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.zm.model.Course" >
     update t_course
     <set >
       <if test="cname != null" >
@@ -85,7 +85,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.model.Course" >
+  <update id="updateByPrimaryKey" parameterType="com.zm.model.Course" >
     update t_course
     set cname = #{cname,jdbcType=VARCHAR},
       teacher = #{teacher,jdbcType=VARCHAR},

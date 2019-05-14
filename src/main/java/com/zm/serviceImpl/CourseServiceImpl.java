@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.zm.dao.CourseDao;
 import com.zm.model.Course;
 import com.zm.service.CourseService;
-@Service
+@Service(value="courseService")
 public class CourseServiceImpl implements CourseService {
 
     @Resource

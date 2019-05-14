@@ -15,7 +15,7 @@ import com.zm.service.CourseService;
 @RequestMapping("/course")
 public class CourseController {
 
-    @Resource
+    @Resource(name="courseService")
     private CourseService courseService;
 
     /**

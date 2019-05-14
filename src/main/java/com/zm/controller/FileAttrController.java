@@ -20,7 +20,7 @@ import com.zm.service.FileAttrService;
 public class FileAttrController {
 
 	@Resource
-	FileAttrService filerService;
+	private FileAttrService filerService;
 	
 	/**   
 	 * @Title: queryAll   
