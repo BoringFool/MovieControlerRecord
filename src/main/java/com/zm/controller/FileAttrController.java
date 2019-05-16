@@ -5,6 +5,8 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zm.model.FileAttr;
 import com.zm.service.FileAttrService;
@@ -17,6 +19,7 @@ import com.zm.service.FileAttrService;
  *     
  */
 @Controller
+@RequestMapping("/show")
 public class FileAttrController {
 
 	@Resource
@@ -29,6 +32,8 @@ public class FileAttrController {
 	 * @return: List<FileAttr>      
 	 * @throws   
 	 */
+	@RequestMapping("/query")
+	@ResponseBody
 	public List<FileAttr> queryAll(){
 		return filerService.queryAll();
 	}

@@ -20,6 +20,8 @@
 
    <!-- 静态资源处理，CSS, JS, IMGS -->
    <mvc:resources location="/resources/" mapping="/resources/**" />
+   <mvc:resources location="/js/" mapping="/js/**" />
+   <mvc:resources location="/css/" mapping="/css/**" />
 
    <!-- 对模型视图添加前后缀 -->
      <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
