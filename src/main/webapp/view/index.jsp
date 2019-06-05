@@ -3,5 +3,6 @@
 <script type="text/javascript" src="../js/test.js"></script>
 <body>
 <h2>Hello World!</h2>
+<div id="showblock"></div>
 </body>
 </html>

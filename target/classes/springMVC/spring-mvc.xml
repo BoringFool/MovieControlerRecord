@@ -12,7 +12,7 @@
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
-    <!-- 扫描controller（controller层注入） -->
+   <!-- 扫描controller（controller层注入） -->
    <context:component-scan base-package="com.zm.controller"/>
 
    <!--DispatcherServlet启用基于annotation的HandlerMapping  -->
