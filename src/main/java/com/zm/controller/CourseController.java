@@ -31,6 +31,7 @@ public class CourseController {
          System.out.println(courses);
          for(Course cou:courses){
              System.out.println(cou.getCname());
+             
          }
          mav.addObject("courses", courses); 
         return mav;  
